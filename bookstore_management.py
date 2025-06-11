@@ -221,27 +221,27 @@ if __name__ == "__main__":
     ## 4. Demonstrate the following interactions:
     user = store.login_user("Ayesha", "password12345")
   
-    if user:
-        for b in store.search_book("Physics"):
+    
+    for b in store.search_book("Physics"):
             b.display_book_info()
    
-        user.add_to_cart(book1, 2)
+    user.add_to_cart(book1, 2)
    
-        user.view_cart()
+    user.view_cart()
 
-        order = user.place_order(store)
+    order = user.place_order(store)
 
-        if order:
-            order.display_order_details()
+   
+    order.display_order_details()
 
  
     admin_user = store.login_user("admin", "root123")
 
-    if admin_user:
-        admin_user.view_all_users(store)
+  
+    admin_user.view_all_users(store)
 
-        admin_user.add_book(store, "Biology", "Dr. Akhtar", "ISBN007", 49.99, 8)
+    admin_user.add_book(store, "Biology", "Dr. Akhtar", "ISBN007", 49.99, 8)
 
-        admin_user.update_book_stock(store, "ISBN007", 15)
+    admin_user.update_book_stock(store, "ISBN007", 15)
         
-        order.update_status("Shipped")
+    order.update_status("Shipped")
