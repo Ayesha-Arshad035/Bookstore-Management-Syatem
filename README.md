@@ -1,1 +1,1 @@
-# Bookstore-Management-Syatem
+# Bookstore-Management-System
