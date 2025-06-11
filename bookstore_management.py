@@ -244,6 +244,4 @@ if __name__ == "__main__":
 
         admin_user.update_book_stock(store, "ISBN007", 15)
         
-        if store.orders:
-            first_order = store.orders[0]
-            first_order.update_status("Shipped")
+        order.update_status("Shipped")
